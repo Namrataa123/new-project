@@ -1,0 +1,37 @@
+package SeleniumWebDriverConcept;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+
+
+public class Tables {
+	
+	public static WebDriver driver;
+	
+	public static void main(String[] args) {
+	BaseUtil bu = new BaseUtil();
+	CommonUtils cu = new CommonUtils();
+
+	driver=bu.launchapplication("chrome");
+	  driver.manage().window().maximize();
+	  
+	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+
+	
+	driver.get("https://www.w3schools.com/html/html_tables.asp");
+//	 List<WebElement> list=driver.findElements(By.xpath("(//tbody/tr/td)"));
+	//String tabletext=  driver.findElement(By.xpath("(//tbody/tr/td)[17]")).getText();
+	//System.out.println( ""  +tabletext);
+	
+	List<WebElement> list=driver.findElements(By.xpath("(//tbody/tr/td)"));
+
+	
+	for(int i= 0; i<list.size();i++)
+		System.out.println(list.get(i).getText());
+}
+}

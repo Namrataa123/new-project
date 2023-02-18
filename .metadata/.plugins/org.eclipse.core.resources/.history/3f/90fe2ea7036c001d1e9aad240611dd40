@@ -1,0 +1,16 @@
+package com.Facebook.Testcases;
+
+import com.Facebook.Base.Baseclass;
+import com.Facebook.Pageobjects.OranangeHrmLeaveapage;
+
+public class OrangeHrmtApply extends Baseclass {
+
+	public void Applytest()
+	{
+		OranangeHrmLeaveapage op =new OranangeHrmLeaveapage();
+		op.clickapplylink();
+		op.clickdropdownbutton();
+		op.
+	}
+	
+	

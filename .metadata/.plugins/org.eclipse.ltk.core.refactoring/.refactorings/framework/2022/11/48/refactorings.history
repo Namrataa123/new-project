@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;com.Facebook.Pageobjects.PrivacyPolicypage.clickprivacypolicylink()&apos; to &apos;clickcookiespolicylink&apos;&#x0D;&#x0A;- Original project: &apos;framework&apos;&#x0D;&#x0A;- Original element: &apos;com.Facebook.Pageobjects.PrivacyPolicypage.clickprivacypolicylink()&apos;&#x0D;&#x0A;- Renamed element: &apos;com.Facebook.Pageobjects.PrivacyPolicypage.clickcookiespolicylink()&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;clickprivacypolicylink&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src\/test\/java=/test=/true=/=/optional=/true=/=/maven.pomderived=/true=/&lt;com.Facebook.Pageobjects{PrivacyPolicypage.java[PrivacyPolicypage~clickprivacypolicylink" name="clickcookiespolicylink" references="true" stamp="1668924071558" version="1.0"/>
+</session>

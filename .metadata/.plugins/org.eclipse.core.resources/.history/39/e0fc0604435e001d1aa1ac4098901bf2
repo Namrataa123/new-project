@@ -1,0 +1,96 @@
+package SeleniumWebDriverConcept;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+public class Facebook_windowhandles {
+ public static WebDriver driver;
+ public static String linkname;
+ 
+ 
+ public static String explink="Create Page";
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		BaseUtil bu = new BaseUtil();
+		CommonUtils cu = new CommonUtils();
+	driver=	 bu.launchapplication("chrome");
+	driver.get("https://www.facebook.com/");
+	    
+	driver.findElement(By.name("email")).sendKeys("abc@gmail.com");
+	
+	
+ String acttitle = driver.getTitle();
+	System.out.println("the actual title is :"+ acttitle);
+	
+	if(acttitle.equalsIgnoreCase("Facebook - log in or sign up"))
+	{
+		System.out.println("Pass -->Facebook application is opened");
+	}
+	else
+		{
+		System.out.println("Fail ---> Facebook application is not opened");
+	}
+	
+	// count the number of links
+	
+	/* List<WebElement> links = driver.findElements(By.tagName("a"));// for count of all the links
+	 int nooflinks = links.size();
+	 System.out.println(" "+nooflinks);
+	 
+	 
+	 //name of the links
+	 for(int i=0; i< nooflinks; i++)
+	 {
+	 linkname=links.get(i).getText();
+	
+	System.out.println( "" +linkname);
+	 }
+	 
+	 //get the links that has the name
+	 if(linkname.isEmpty()==false)
+	 {
+		System.out.println(""  +linkname); 
+	 }
+	 */
+	 
+	
+cu.clickelement(driver.findElement(By.linkText("Sign Up")),"Signup button");
+	
+	
+Select s = new 	Select(driver.findElement(By.xpath("//Select[@name='birthday_month']")));
+	//s.selectByIndex(5);
+	//s.selectByVisibleText("Oct");
+	
+	//Select s1 = new Select(driver.findElement(By.xpath("//select[@name='birthday_day']")));
+	
+	
+	//count the number of values from day drop down
+	List<WebElement> days= s.getOptions();
+	int noofmonths= days.size();
+	System.out.println("" +noofmonths);
+	
+//cu.clickelement(driver.findElement(By.xpath("//input[@value=2]")),"Male radio button");
+
+          List<WebElement>  radiobuttons  =  driver.findElements(By.xpath("//span[@class='_5k_3']"));
+      int    noofradiobuttons =radiobuttons.size();
+      System.out.println( +noofradiobuttons);
+	
+/*Set<String>	ids = driver.getWindowHandle();
+Iterator<String> itr = ids.iterator();
+
+String FirstWindow =itr.next();
+String Secondwindow =itr.next();*/
+
+
+
+	}
+
+}

@@ -1,0 +1,31 @@
+package com.gorestapi.com;
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+import java.util.HashMap;
+public class TC002_PostCalls {
+
+	public HashMap map= new HashMap();
+	@Test
+	public void createcustomer()
+	{
+		map.put("name", "namrata");
+		map.put("email", "n@gmail.com");
+		map.put("gender", "male");
+		map.put("status", "active");
+		
+		given()
+		//content type
+		.contentType("application/json")
+		//token
+		.headers("Authorization","Bearer 7befc5c3ab8fdc63cccfd068d7814d183354f988219c8cc862086129aa2547c8")
+		//payload
+		.body(map)
+		.when()
+		.post("https://gorest.co.in/public/v2/users")
+		.then()
+		.log().all();
+		
+	}
+}

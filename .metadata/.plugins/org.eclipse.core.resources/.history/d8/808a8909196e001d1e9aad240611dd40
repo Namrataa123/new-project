@@ -1,0 +1,15 @@
+package com.GoRestAPI.com;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matcher.*;
+
+import org.testng.annotations.Test;
+public class TC001_GetCalls {
+
+	@Test
+	public void getDetailsTest()
+	{
+		given().when().get("https://gorest.co.in/public/v2/users").then().log().all().statusCode(200);
+		
+		
+	}
+}

@@ -1,0 +1,21 @@
+package Firstweekclasses;
+
+public class TC0028_Exception {
+
+	public static void main(String[] args) {
+	
+
+		// TODO Auto-generated method stub
+		try {
+String subjects[]= new String[5];
+subjects[0]= "automation";
+subjects[1] ="java";
+
+
+		}catch(Exception e) {
+		e.printStackTrace();
+		
+	}
+
+}
+}

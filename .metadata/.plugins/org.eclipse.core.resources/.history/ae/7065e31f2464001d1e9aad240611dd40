@@ -1,0 +1,24 @@
+package alltest;
+
+import org.testng.annotations.Test;
+
+import Com.driver.BaseClass;
+import Com.utility.CommonFunctions;
+
+public class FacebookSignupTest extends BaseClass{
+	
+	
+	
+	
+	@Test
+	public void testcase()
+	{
+		
+		driver.get(CommonFunctions.readpropertiesFile("url"));
+		
+	}
+	
+	
+	
+
+}

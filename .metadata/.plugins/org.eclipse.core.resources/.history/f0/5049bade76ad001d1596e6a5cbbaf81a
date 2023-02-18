@@ -1,0 +1,25 @@
+package com.gorestapi.com;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+public class putandpatch {
+	
+	public void createcustomer()
+	{
+	
+		given()
+		//content
+		.contentType("application/json");
+		//token
+		
+		
+	
+		
+		
+		
+		
+		
+		
+	}
+	
+}

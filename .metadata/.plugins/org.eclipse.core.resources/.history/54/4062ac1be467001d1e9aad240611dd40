@@ -1,0 +1,5 @@
+package com.Facebook.Pageobjects;
+
+public class ForgotpasswordPage {
+
+}

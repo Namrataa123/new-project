@@ -1,0 +1,56 @@
+package com.orangeHRM.allPages.Leaves.applyLeaves;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.Facebook.Base.Baseclass;
+
+public class LoginPage extends Baseclass{
+
+@FindBy(xpath="//input[@name='username']")
+WebElement textUsername;
+
+@FindBy(xpath="//input[@name='password']")
+WebElement textpassword;
+
+@FindBy(xpath="//button[contains(.,'Login')]")
+WebElement loginbutton;
+
+
+public void username()
+{
+	try {
+	textUsername.clear();
+	textUsername.sendKeys("Admin");
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	
+	
+	}
+
+
+public void password()
+{
+	try {
+	textpassword.clear();
+	textpassword.sendKeys("admin123");
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	
+	
+	
+}
+
+public void login(){
+	loginbutton.click();
+	
+}
+
+
+
+
+}
+
+

@@ -1,0 +1,15 @@
+package com.GoRestAPI.com;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+import org.testng.annotations.Test;
+@SuppressWarnings("unused")
+public class TC001_GetCalls {
+
+	@Test
+	public void getDetailsTest()
+	{
+		given().when().get("https://gorest.co.in/public/v2/users");
+		
+	}
+}

@@ -1,0 +1,30 @@
+package SeleniumWebDriverConcept;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class TC006_windowhandle1 {
+public static WebDriver driver;
+
+	
+	@SuppressWarnings("deprecation")
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		BaseUtil bu = new BaseUtil();
+		CommonUtils cu = new CommonUtils();
+		
+	driver=	bu.launchapplication("chrome");
+	driver.get("https://www.facebook.com/reg/");
+	driver.manage().window().maximize();
+	
+	driver.manage().timeouts().implicitlyWait(6000,TimeUnit.MILLISECONDS);
+		
+	
+	cu.clickelement(driver.findElement(By.linkText("Already have an account?")),"already have an account link");
+	
+	}
+
+}

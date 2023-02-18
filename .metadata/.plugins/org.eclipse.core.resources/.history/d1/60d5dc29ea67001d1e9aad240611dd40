@@ -1,0 +1,11 @@
+package com.Facebook.Testcases;
+
+import com.Facebook.Base.Baseclass;
+import com.Facebook.Pageobjects.Createanewaccountpage;
+
+public class TC003_Createanewaccount extends Baseclass {
+
+	Createanewaccountpage cap = new Createanewaccountpage();
+	
+	
+}

@@ -1,0 +1,20 @@
+package Firstweekclasses;
+
+public class TC0023_stringEqualIngnorecase {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s = "    We are learning selenium   ";
+String s2 ="we are learning selenium ";
+   if (s.equalsIgnoreCase(s2))
+   {
+	   System.out.println("it is matching");
+   }
+   else 
+   {
+	   System.out.println("it is not matching");
+   }
+		
+	}
+
+}

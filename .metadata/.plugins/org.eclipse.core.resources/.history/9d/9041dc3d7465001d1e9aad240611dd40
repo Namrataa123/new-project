@@ -1,0 +1,29 @@
+package com.Facebook.Testcases;
+
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BaseClass {
+
+	public WebDriver driver;
+	public Properties prop;
+	
+	
+	
+
+	public void Setup()
+	{
+		
+		WebDriver.ChromeDriver().setup();
+		driver= new ChromeDriver();
+		System.out.println("chrome Brower is installed");
+		driver.manage().window().maximize();
+		
+	}	
+	
+	
+	
+}

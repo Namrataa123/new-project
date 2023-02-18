@@ -1,0 +1,18 @@
+package SeleniumWebDriverConcept;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+public class TestNgEx {
+	
+	
+	driver.get("https://www.w3schools.com/html/html_tables.asp");
+	 List<WebElement> list=driver.findElements(By.xpath("(//tbody/tr/td)"));
+	String tabletext=  driver.findElement(By.xpath("(//tbody/tr/td)[17]")).getText();
+	System.out.println( ""  +tabletext);
+	
+	
+
+}

@@ -1,0 +1,22 @@
+package com.GoRestAPI.com;
+
+import org.junit.Test;
+import static io.restassured.Restassured.*;
+import static org.hamcrest.Matcher.*;
+public class TC001_GetCalls {
+
+	@Test
+	 public void getDetailsTest()
+	 {
+		given()
+		when()
+		get()
+		then()
+		
+		
+	 }
+	
+	
+	
+	
+}

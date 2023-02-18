@@ -1,0 +1,19 @@
+package com.gorestapi.com;
+import org.testng.annotations.Test;
+import static org.hamcrest.Matchers.*;
+import static io.restassured.RestAssured.*;
+
+public class putandpatchex {
+
+ public void putcalls()
+ {
+	 given().contentType("application/json").headers("Authorization","Bearer ")
+	 	 
+	 .when()
+	 .get("https://gorest.co.in/public/v2/users")
+	 .then()
+	 .log().all();
+ }
+	
+	
+}

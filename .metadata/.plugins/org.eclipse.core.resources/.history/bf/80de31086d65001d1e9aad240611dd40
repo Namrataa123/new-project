@@ -1,0 +1,35 @@
+package allpages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import Com.driver.BaseClass;
+
+public class FacebookSignupPage extends BaseClass{
+	
+	
+	@FindBy(id="email")
+	public WebElement usernametxtbox;
+	
+	@FindBy(id="pass")
+	public WebElement passtxtbox;
+	
+	
+	public FacebookSignupPage()
+	{
+		
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	
+	public void login()
+	{
+		
+		
+		usernametxtbox.sendKeys("abc");
+		passtxtbox.sendKeys("def");
+	}
+
+}

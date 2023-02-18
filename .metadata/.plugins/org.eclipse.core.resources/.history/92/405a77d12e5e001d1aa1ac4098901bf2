@@ -1,0 +1,69 @@
+package SeleniumWebDriverConcept;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class Facebook_windowhandles {
+ public static WebDriver driver;
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		BaseUtil bu = new BaseUtil();
+		CommonUtils cu = new CommonUtils();
+	driver=	 bu.launchapplication("chrome");
+	driver.get("https://www.facebook.com/");
+	    
+	driver.findElement(By.name("email")).sendKeys("abc@gmail.com");
+	
+	
+ String acttitle = driver.getTitle();
+	System.out.println("the actual title is :"+ acttitle);
+	
+	if(acttitle.equalsIgnoreCase("Facebook - log in or sign up"))
+	{
+		System.out.println("Pass -->Facebook application is opened");
+	}
+	else
+		{
+		System.out.println("Fail ---> Facebook application is not opened");
+	}
+	
+	// count the number of links
+	
+	 List<WebElement> links = driver.findElements(By.tagName("a"));// for count of all the links
+	 int nooflinks = links.size();
+	 System.out.println(" "+nooflinks);
+	 
+	 
+	 //name of the links
+	 for(int i=0; i< nooflinks; i++)
+	 {
+	String linkname=links.get(i).getText();
+	
+	System.out.println( "" +linkname);
+	 }
+	
+	//cu.clickelement(driver.findElement(By.linkText("Sign Up")),"Signup button");*/
+	
+	
+	
+	
+	
+	
+//Set<String>	ids = driver.getWindowHandle();
+//Iterator<String> itr = ids.iterator();
+
+//String FirstWindow =itr.next();
+//String Secondwindow =itr.next();
+
+
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.Facebook.Testcases;
+
+import com.Facebook.Base.Baseclass;
+import com.Facebook.Pageobjects.ForgotpasswordPage;
+
+public class TC002_ForgotPasswordTestcase extends Baseclass {
+
+	public void ForgotPassword()
+	{
+		
+		ForgotpasswordPage fp = new ForgotpasswordPage(driver);
+		fp.linkforgotaccount();
+	}
+	
+}

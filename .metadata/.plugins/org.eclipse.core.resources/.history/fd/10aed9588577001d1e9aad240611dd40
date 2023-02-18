@@ -1,0 +1,41 @@
+package com.Facebook.Testcases;
+
+import org.testng.annotations.Test;
+
+import com.Facebook.Base.Baseclass;
+import com.Facebook.Pageobjects.DashboardPage;
+import com.Facebook.Pageobjects.Loginpage;
+import com.Facebook.Pageobjects.OranangeHrmLeaveapage;
+
+public class TC005_DashboardTest extends Baseclass{
+	
+	@Test
+	public void DashboardTest() throws InterruptedException
+	try {
+		{
+Loginpage lp = new Loginpage();
+			
+			
+			lp.enterusername("Admin");
+			lp.enterpassword("admin123");
+			lp.clickloginbutton1();
+			OranangeHrmLeaveapage op =new OranangeHrmLeaveapage();
+			op.linkleave();
+			op.clickapplylink();
+			op.clickdropdownbutton();
+			op.selectdropdwnoption();
+			
+					
+			
+			DashboardPage dp = new DashboardPage(driver);
+			dp.clickonDashboard();
+			dp.verifyDasboardtitle();
+			dp.clickonleaverequeststoappove();
+			
+		}
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
+}

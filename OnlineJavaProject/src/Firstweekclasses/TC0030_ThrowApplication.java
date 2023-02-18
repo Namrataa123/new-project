@@ -1,0 +1,18 @@
+package Firstweekclasses;
+
+public class TC0030_ThrowApplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		try {
+			throw new Exception("Nimmi Exception");
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}
+

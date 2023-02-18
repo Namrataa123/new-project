@@ -1,0 +1,54 @@
+package com.orangeHRM.allPages.Leaves.applyLeaves;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.Facebook.Base.Baseclass;
+
+public class Myinfopage extends Baseclass {
+
+
+@FindBy(xpath="//span[contains(.,'My Info')]")
+WebElement Myinfolink;
+	
+@FindBy(xpath="//span/h6[contains(.,'PIM')]")
+WebElement PIMlink;
+
+public Myinfopage()
+{
+PageFactory.initElements(driver,this );	
+}
+
+public void verifyMyinfolink()
+{
+	Myinfolink.click();
+}
+
+//verify pim link is displayed
+
+public void checkpimlinkisdisplayed()
+{
+boolean status = PIMlink.isDisplayed();
+if(status== true)
+{
+	System.out.println("PIM link is displayed");
+	
+}
+else
+{
+	System.out.println("pim link is missing");
+}
+
+}
+
+}
+
+
+
+
+
+
+
+}
+

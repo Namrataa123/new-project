@@ -1,0 +1,20 @@
+package com.orangeHRM.allPages.Leaves.applyLeaves;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.Facebook.Base.Baseclass;
+
+public class Myinfopage extends Baseclass {
+
+
+@FindBy(xpath="//span[contains(.,'My Info')]")
+WebElement Myinfolink;
+	
+	
+public Myinfopage()
+{
+PageFactory.initElements(driver,this );	
+}
+}

@@ -1,0 +1,57 @@
+package com.Facebook.Pageobjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Loginpage {
+
+	public WebDriver  driver;
+	
+	 public Loginpage(WebDriver driver)
+	 {
+		 this.driver=driver;
+		 PageFactory.initElements(driver,this);
+	 }
+	 
+	 @FindBy(name="email")
+	 WebElement txtemail;
+	 
+	 @FindBy(name="pass")
+	 WebElement txtpass;
+	 
+	 @FindBy(xpath="//button[@type='submit']")
+	 WebElement btnlogin;
+	 
+	
+	 
+	 public void enteremail(String Val)
+	 {
+		 txtemail.clear();
+		 txtemail.sendKeys(Val);
+		 String Valentered =txtemail.getAttribute("value");
+		 System.out.println("value entered in username field is " +Valentered);
+	 }
+	 
+	 public void enterpass(String Val)
+	 {
+		 txtpass.clear();
+		 txtpass.sendKeys(Val);
+		 String Valentered =txtpass.getAttribute("value");
+		 System.out.println("value entered in Password field is"+Valentered);
+		 
+	 }
+	 public void clickloginbutton()
+	 {
+		btnlogin.click();
+		System.out.println("clicked on login button");
+	 }
+	 
+	 public void linkforgotaccount()
+	 {
+		 linkforgotaccount.click();
+		 System.out.println("Forgot account is clicked");
+	 }
+	 
+}

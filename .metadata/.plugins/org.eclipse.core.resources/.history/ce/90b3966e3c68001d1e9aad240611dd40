@@ -1,0 +1,8 @@
+package com.Facebook.Testcases;
+
+import com.Facebook.Base.Baseclass;
+
+public class TC004_PrivacypolicyPage extends Baseclass{
+
+	Privacy
+}

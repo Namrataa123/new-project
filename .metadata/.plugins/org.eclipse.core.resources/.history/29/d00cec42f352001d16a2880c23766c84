@@ -1,0 +1,10 @@
+package Firstweekclasses;
+
+public class TC0028_Exception {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
